@@ -11,12 +11,15 @@ def calculate_revenue(prices, quantities_sold):
         revenue.append(product_revenue)
     return revenue
 
+def formatted_output(revenues):
+    for product_name, product_revenue in sorted(revenues):
+        print(f"{product_name} has total revenue of ${product_revenue}")
 revenue = calculate_revenue(prices, quantities_sold)
 
 revenue_per_product = list(zip(products, revenue))
-revenue_per_product = sorted(revenue_per_product)
+#revenue_per_product = sorted(revenue_per_product)
 
-print(revenue_per_product)
+#print(revenue_per_product)
 
 for product in revenue_per_product:
     product_name = product[0]
